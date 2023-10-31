@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Events Ticket Card</title>
 </head>
 <style>
@@ -20,7 +21,7 @@ body {
     min-height: 100vh;
     width: 100%;
     font-size: 16px;
-    background: #eee;
+    background: #0f172a;
     color: #777;
     display: flex;
     justify-content: center;
@@ -43,9 +44,9 @@ body {
     height: 570px;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 9px 7px 5px -2px rgba(0,0,0,0.51);
-    -webkit-box-shadow: 9px 7px 5px -2px rgba(0,0,0,0.51);
-    -moz-box-shadow: 9px 7px 5px -2px rgba(0,0,0,0.51);
+    box-shadow: 8px 8px 9px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 8px 8px 9px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 8px 8px 9px -1px rgba(0,0,0,0.75);
     cursor: pointer;
 }
 
@@ -105,7 +106,7 @@ body {
 }
 
 .separator {
-    width: 20%;
+    width: 30%;
     height: 6px;
     background-color: #17537a;
     margin-bottom: 16px;
@@ -117,6 +118,7 @@ body {
     padding: 28px;
     padding-bottom: 0;
 }
+
 
 .additional-info .info {
     font-size: 0.9em;
@@ -130,15 +132,14 @@ body {
     margin-right: 4px;
 }
 
-.info span {
+.info span a{
     color: #18537a;
     font-weight: bolder;
+    text-decoration: none;
 }
 
 .action {
     color: black;
-    background-color: transparent;
-    position: absolute;
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
@@ -208,7 +209,7 @@ body {
                 <div class="overlay"></div>
 
                 <div class="event-info">
-                    <p class="title">jumat raya</p>
+                    <p class="title">Jumat Raya</p>
                     <div class="separator"></div>
                     <p class="info">meningkatkan jiwa kewirausahaan</p>
                     <p class="price">Free</p>
@@ -216,15 +217,14 @@ body {
                     <div class="additional-info">
                         <p class="info">
                             <i class="fas fa-map-marker-alt"></i>
-                            Smekenmo
+                            Lapangan basket Smekenmo
                         </p>
                         <p class="info">
                             <i class="far fa-calendar-alt"></i>
-                            Sat, Sep 19, 10:00
+                            Jumat, Desember 30, 06.45
                         </p>
-
                         <p class="info description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam commodi molestiae nemo! Quae consectetur quis aperiam, corrupti rem perspiciatis <span>more..</span>!
+                        Bangkitkan semangat profil Pelajar Pancasila melalui kegiatan Kewirausahaan dan pagelaran seni budaya. <span><a href="https://www.gramedia.com/literasi/pengertian-kewirausahaan/">more..</a></span>
                         </p>
                     </div>
                 </div>
@@ -243,23 +243,23 @@ body {
                 <div class="overlay"></div>
 
                 <div class="event-info">
-                    <p class="title">Jalan sehat</p>
+                    <p class="title">Jalan Sehat</p>
                     <div class="separator"></div>
-                    <p class="info">jalan sehat smekenmo</p>
+                    <p class="info">Menjaga kondisi imunitas tubuh</p>
                     <p class="price">free</p>
 
                     <div class="additional-info">
                         <p class="info">
                             <i class="fas fa-map-marker-alt"></i>
-                            smekenmo
+                            Alun-alun Cemara
                         </p>
                         <p class="info">
                             <i class="far fa-calendar-alt"></i>
-                            Sat, Sep 19, 10:00 
+                            Jumat, Agustus 4, 06.45 
                         </p>
 
                         <p class="info description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat est suscipit, tempora recusandae expedita voluptas nam ipsum provident quae <span>more..</span>?
+                            Sebagai pelajar kita juga perlu merefresh tubuh dengan melakukan jalan sehat <span><a href="https://kumparan.com/ragam-info/pengertian-jalan-sehat-dan-manfaatnya-bagi-kesehatan-213KFkjPqYA">more..</a></span>
                         </p>
                     </div>
                 </div>
@@ -278,7 +278,7 @@ body {
                 <div class="overlay"></div>
 
                 <div class="event-info">
-                    <p class="title">jumat refleksi diri</p>
+                    <p class="title">Jumat Refleksi Diri</p>
                     <div class="separator"></div>
                     <p class="info">mewujudkan profil pelajar pancasila </p>
                     <p class="price">free</p>
@@ -286,13 +286,14 @@ body {
                     <div class="additional-info">
                         <p class="info">
                             <i class="fas fa-map-marker-alt"></i>
-                            smekenmo
+                            Lapangan basket Smekenmo
                         </p>
                         <p class="info">
                             <i class="far fa-calendar-alt"></i>
-                            Sat, Sep 19, 10:00
+                            Jumat, November 13, 06.45
                         </p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum et nihil qui aliquid neque vel doloribus ratione maxime quis <span>morre..</span>
+                        <p class="info description">
+                            Refleksi diri yang jujur membuka pikiran Anda untuk pemrograman ulang, perubahan, kesuksesan, dan kebebasan. <span><a href="https://www.alodokter.com/seputar-refleksi-diri-manfaat-dan-cara-menerapkannya">more..</a></span>
                         </p>
                     </div>
                 </div>

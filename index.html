@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Events Ticket Card</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    background: #eee;
+    color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-container {
+    border-radius: 15px;
+    position: relative;
+    margin: 24px;
+    width: 320px;
+    height: 570px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 9px 7px 5px -2px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 9px 7px 5px -2px rgba(0,0,0,0.51);
+    -moz-box-shadow: 9px 7px 5px -2px rgba(0,0,0,0.51);
+    cursor: pointer;
+}
+
+.img-container,
+.body-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.body-container {
+    position: relative;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(24, 83, 122, 0.696);
+    opacity: 0;
+    transition: height linear 0.4s, opacity linear 0.2s;
+}
+
+.item-container:hover .overlay {
+    opacity: 1;
+    height: 150px;
+}
+
+.event-info {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.title,
+.price {
+    color: #18537a;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 12px;
+}
+
+.info {
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.separator {
+    width: 20%;
+    height: 6px;
+    background-color: #17537a;
+    margin-bottom: 16px;
+}
+
+.additional-info {
+    border-top: 1px solid #bbb;
+    margin-top: 12px;
+    padding: 28px;
+    padding-bottom: 0;
+}
+
+.additional-info .info {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info i {
+    color: #18537a;
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+
+.info span {
+    color: #18537a;
+    font-weight: bolder;
+}
+
+.action {
+    color: black;
+    background-color: transparent;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: background-color 0.4s, top 0.4s;
+    border: none;
+    background: none;
+    transition: 0.8s;
+    position: absolute;
+    overflow: hidden;
+}
+
+.item-container:hover .action {
+    top: 50px;
+}
+
+.action:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+        .btn1{
+            color: white;
+            transition-duration: 700ms;
+            border: 3px solid white
+        }
+        .btn1:hover{
+            color: #17537a;
+        }
+
+        .action::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: -1;
+            transition: 0.8s;
+        }
+        .btn1::before{
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+        }
+        .btn1::before{
+            height: 0%;
+        }
+        .btn1:hover::before{
+            height: 180%;
+        }
+</style>
+<body>
+    <div class="container">
+        <div class="item-container">
+            <div class="img-container">
+                <img src="gambar/gambar1.jpeg" alt="Event image">
+            </div>
+
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">jumat raya</p>
+                    <div class="separator"></div>
+                    <p class="info">meningkatkan jiwa kewirausahaan</p>
+                    <p class="price">Free</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Smekenmo
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00
+                        </p>
+
+                        <p class="info description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam commodi molestiae nemo! Quae consectetur quis aperiam, corrupti rem perspiciatis <span>more..</span>!
+                        </p>
+                    </div>
+                </div>
+                <form action="https://wa.me/qr/XP7JBIINL2ZUL1">
+                <button class="action btn1">Book now</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="gambar/gambar2.jpeg" alt="Event image">
+            </div>
+
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">Jalan sehat</p>
+                    <div class="separator"></div>
+                    <p class="info">jalan sehat smekenmo</p>
+                    <p class="price">free</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            smekenmo
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00 
+                        </p>
+
+                        <p class="info description">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat est suscipit, tempora recusandae expedita voluptas nam ipsum provident quae <span>more..</span>?
+                        </p>
+                    </div>
+                </div>
+                <form action="https://wa.me/qr/XP7JBIINL2ZUL1">
+                <button class="action btn1">Book now</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="gambar/gambar3.jpeg" alt="Event image">
+            </div>
+
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">jumat refleksi diri</p>
+                    <div class="separator"></div>
+                    <p class="info">mewujudkan profil pelajar pancasila </p>
+                    <p class="price">free</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            smekenmo
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00
+                        </p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum et nihil qui aliquid neque vel doloribus ratione maxime quis <span>morre..</span>
+                        </p>
+                    </div>
+                </div>
+                <form action="https://wa.me/qr/XP7JBIINL2ZUL1">
+                <button class="action btn1">Book now</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="img-container">
+                <img src="./images/img4.jpg" alt="Event image">
+            </div>
+
+            <div class="body-container">
+                <div class="overlay"></div>
+
+                <div class="event-info">
+                    <p class="title">Tech Bubble Conf</p>
+                    <div class="separator"></div>
+                    <p class="info">New York, NY</p>
+                    <p class="price">35$</p>
+
+                    <div class="additional-info">
+                        <p class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            245 W 52nd St, New York
+                        </p>
+                        <p class="info">
+                            <i class="far fa-calendar-alt"></i>
+                            Sat, Sep 19, 10:00 AM EDT
+                        </p>
+
+                        <p class="info description">
+                            Welcome! Everyone has a unique perspective after reading a book, and we would love you
+                            to share yours with us! We meet one Sunday evening <span>more...</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="action btn1">Book it</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
